@@ -1,11 +1,13 @@
-const prev = document.getElementsByClassName( "paging-lay" )[0].children[0].children[0].getElementsByTagName("a")[0];
-const next = document.getElementsByClassName( "paging-lay" )[0].children[0].children[1].getElementsByTagName("a")[0];
+const prev = document.querySelector(".paging-lay .blk1-lay a");
+const next = document.querySelector(".paging-lay .blk2-lay a");
 
 document.addEventListener("keydown", event => {
-    if (event.isComposing || event.keyCode === 37) {
-        prev.click();
-    } else if (event.isComposing || event.keyCode === 39) {
-        next.click();
+    switch(event.keyCode) {
+        case 37:
+            prev.click();
+            break;
+        case 39:
+            next.click();
+            break
     }
 });
-
