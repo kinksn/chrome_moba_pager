@@ -1,0 +1,12 @@
+{
+    "name": "moba_pager",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "モバゲータウン（Web版）のサークルトピック詳細を「←」「→」でページ送りすることができます",
+    "content_scripts": [{
+      "matches": ["http://yahoo-mbga.jp/*/*/topic/*"],
+      "js": [
+        "content.js"
+      ]
+    }]
+  }
